@@ -1,0 +1,13 @@
+*.otf
+*.ttf
+*.log
+*.toc
+*.aux
+.git-old
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.pdf
+*.mlx
+*.out
