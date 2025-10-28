@@ -6,8 +6,8 @@
 \usepackage{fontspec}
 \usepackage{tikz}
 
-% \usetheme{Nord}
-\usetheme[style=light]{Nord}
+\usetheme{Nord}
+% \usetheme[style=light]{Nord}
 
 \setmainfont{Fira Sans Extra Condensed}
 \setsansfont{Fira Sans}
@@ -95,27 +95,35 @@
 % TODO: change colors to Nord
 
 \lstdefinestyle{mystyle}{
-	backgroundcolor=\color{NordBrighterWhite},
-	commentstyle=\color{NordBrightBlack},
-	keywordstyle=\color{NordBrightCyan},
-	numberstyle=\tiny\color{NordBrightBlack},
-	stringstyle=\color{NordGreen},
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,
-	breaklines=true,
-	captionpos=b,
-	keepspaces=true,
-	numbers=left,
-	numbersep=10pt,
-	showspaces=false,
-	showstringspaces=false,
-	showtabs=false,
-	tabsize=4,
-	columns=fullflexible,
-	xleftmargin=5pt,
-	frame=lr,
-	framesep=5pt,
-	framerule=0pt,
+    % Nord light
+    % basicstyle=\color{NordDarkBlack}\ttfamily\footnotesize,        % nord0
+    % backgroundcolor=\color{NordBrightestWhite},                     % nord6
+    % identifierstyle=\color{NordDarkBlack},                      % nord8
+    % Nord dark
+    basicstyle=\color{NordBrightestWhite}\ttfamily\footnotesize, % nord6
+    backgroundcolor=\color{NordDarkBlack},                       % nord0
+    identifierstyle=\color{NordBrightCyan},                      % nord8
+    % Nord dark and light
+    numberstyle=\tiny\color{NordBrightBlack},                    % nord3
+    commentstyle=\color{NordBrightBlack},                           % nord3
+    keywordstyle=\color{NordBlue},                               % nord9
+    stringstyle=\color{NordGreen},                               % nord14
+    % directivestyle=\color{NordOrange},                           % nord12
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=10pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    columns=fullflexible,
+    xleftmargin=5pt,
+    frame=lr,
+    framesep=5pt,
+    framerule=0pt,
 }
 
 \lstset{style=mystyle}
