@@ -13,15 +13,15 @@
 \begin{document}
 
 \begin{frame}[plain,noframenumbering]
-  \maketitle
+	\maketitle
 \end{frame}
 
 
 \section{Appearance 外観みたいなものかな？知らんけど。ビーマーノード}
 
 \begin{frame}[fragile]
-    \frametitle{Test lstlistings}
-\begin{lstlisting}[language=C++]
+	\frametitle{Test lstlistings}
+	\begin{lstlisting}[language=C++]
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -32,6 +32,7 @@ int main() {
     cout << "我が世誰ぞ 常ならむ" << endl;
     // 有為の奥山 今日越えて
     // 浅き夢見し 酔ひもせず
+    // The quick brown fox jumps over the lazy dog.
     cin << a;
     a *= 2;
     cout << a << endl;
@@ -42,62 +43,64 @@ int main() {
 
 
 \begin{frame}[fragile]
-  \frametitle{Usage}
-  Simply include the following code in your preamble:
+	\frametitle{Usage 使う}
+	Simply include the following code in your preamble:
 
-  これを入れるだけでOK:
+	これを入れるだけでOK:
 
-\begin{lstlisting}[basicstyle = \ttfamily\small]
+	\begin{lstlisting}[language=tex]
 \usetheme{Nord}
 \end{lstlisting}
 
-  \bigskip
+	\bigskip
 
-  By default, the appearance is in dark theme, however you can actively choose a either a light or a
-  dark theme.
+	By default, the appearance is in dark theme, however you can actively choose a either a light or a
+	dark theme.
 
-  \begin{lstlisting}[basicstyle = \ttfamily\small]
+	デフォルトでは黒い背景になりますが、白い背景も選択できます。文字もじモジご機嫌よう。行距看起來還可以嗎？應該可吧。
+
+	\begin{lstlisting}[language=tex]
 \usetheme[style=light]{Nord}
 \usetheme[style=dark]{Nord}
-  \end{lstlisting}
+\end{lstlisting}
 
 \end{frame}
 
 \subsection{Colors}
 
 \begin{frame}{Defined Colors}{This is a subtitle}
-  \begin{description}[Snow Storm]
-  \item[Polar Night]
-    \textcolor{NordDarkBlack}{NordDarkBlack} \quad \textcolor{NordBlack}{NordBlack}\\
-    \textcolor{NordMediumBlack}{NordMediumBlack} \quad \textcolor{NordBrightBlack}{NordBrightBlack}
-  \item[Snow Storm]
-    \textcolor{NordWhite}{NordWhite} \quad \textcolor{NordBrighterWhite}{NordBrightestWhite}\\
-    \textcolor{NordBrightestWhite}{NordBrightestWhite}
-  \item[Forest]
-    \textcolor{NordCyan}{NordCyan} \quad \textcolor{NordBrightCyan}{NordBrightCyan}\\
-    \textcolor{NordBlue}{NordBlue} \quad \textcolor{NordBrightBlue}{NordBrightBlue}
-  \item[Aurora]
-    \textcolor{NordRed}{NordRed} \quad \textcolor{NordOrange}{NordOrange} \\
-    \textcolor{NordYellow}{NordYellow} \quad \textcolor{NordGreen}{NordGreen} \\
-    \textcolor{NordMagenta}{NordMagenta}
-  \end{description}
+	\begin{description}[Snow Storm]
+		\item[Polar Night]
+		      \textcolor{NordDarkBlack}{NordDarkBlack} \quad \textcolor{NordBlack}{NordBlack}\\
+		      \textcolor{NordMediumBlack}{NordMediumBlack} \quad \textcolor{NordBrightBlack}{NordBrightBlack}
+		\item[Snow Storm]
+		      \textcolor{NordWhite}{NordWhite} \quad \textcolor{NordBrighterWhite}{NordBrightestWhite}\\
+		      \textcolor{NordBrightestWhite}{NordBrightestWhite}
+		\item[Forest]
+		      \textcolor{NordCyan}{NordCyan} \quad \textcolor{NordBrightCyan}{NordBrightCyan}\\
+		      \textcolor{NordBlue}{NordBlue} \quad \textcolor{NordBrightBlue}{NordBrightBlue}
+		\item[Aurora]
+		      \textcolor{NordRed}{NordRed} \quad \textcolor{NordOrange}{NordOrange} \\
+		      \textcolor{NordYellow}{NordYellow} \quad \textcolor{NordGreen}{NordGreen} \\
+		      \textcolor{NordMagenta}{NordMagenta}
+	\end{description}
 \end{frame}
 
 \subsection{Fonts}
 
 \begin{frame}[fragile]{Recommended Free Fonts}
-  \begin{description}[Selected Fonts]
-  \item[Font選択] recommended for this theme\\
-    \begin{lstlisting}[basicstyle = \ttfamily\small]
+	\begin{description}[Selected Fonts]
+		\item[Font選択] recommended for this theme\\
+            \begin{lstlisting}[language=tex]
 % これは嘘です
 \setmainfont{Yanone Kaffeesatz}
 \setsansfont{Andika New Basic}
 \setmonofont{DejaVu Sans Mono}
-    \end{lstlisting}
-  \item[ダウンロード] {\small \url{https://www.fontsquirrel.com/}}
-  \item[インストール] {\small \url{https://www.google.com/get/noto/help/install/}}
-  \item[コンパイル] compile with \XeLaTeX~to use system-wide fonts
-  \end{description}
+\end{lstlisting}
+		\item[ダウンロード] {\small \url{https://www.fontsquirrel.com/}}
+		\item[インストール] {\small \url{https://www.google.com/get/noto/help/install/}}
+		\item[コンパイル] compile with \XeLaTeX~to use system-wide fonts
+	\end{description}
 
 \end{frame}
 
@@ -105,61 +108,62 @@ int main() {
 \subsection{Blocks}
 
 \begin{frame}
-  \frametitle{Blocks}
-  \begin{block}{This is a Block}
-    \[
-      a^2 + b^2 = c^2
-    \]
-  \end{block}
-  \begin{exampleblock}{This is an Example Block}
-    \[
-      E = m \cdot c^{2}
-    \]
-  \end{exampleblock}
-  \begin{alertblock}{This is an Alert Block}
-    \[
-      e^{i\pi} + 1 = 0
-    \]
-  \end{alertblock}
+	\frametitle{Blocks}
+	\begin{block}{This is a Block}
+		\[
+			a^2 + b^2 = c^2
+		\]
+	\end{block}
+	\begin{exampleblock}{This is an Example Block}
+		\[
+			E = m \cdot c^{2}
+		\]
+	\end{exampleblock}
+	\begin{alertblock}{注意ブロックです}
+		\[
+			e^{i\pi} + 1 = 0
+		\]
+	\end{alertblock}
 
-  \centering
-  \begin{minipage}{1.0\linewidth}
-    \begin{block}{Horizontally-Aligned Block}
-      \[
-        \log xy = \log x + \log y
-      \]
-    \end{block}
-  \end{minipage}
+	\centering
+	\begin{minipage}{1.0\linewidth}
+		\begin{block}{Horizontally-Aligned Block}
+			\[
+				\log xy = \log x + \log y
+			\]
+		\end{block}
+	\end{minipage}
 \end{frame}
 
 \subsection{Items}
 
 \begin{frame}{Items}
-  Itemize
-  \begin{itemize}
-    \item item 1
-    \item item 2
-  \end{itemize}
+	Itemize
+	\begin{itemize}
+		\item item 1
+		\item item 2
+	\end{itemize}
 
-  \bigskip
+	\bigskip
 
-  Enumerate
-  \begin{enumerate}
-    \item item 1
-    \item item 2
-  \end{enumerate}
+	Enumerate
+	\begin{enumerate}
+		\item item 1
+		\item item 2
+		\item 項目３
+	\end{enumerate}
 \end{frame}
 
 \subsection{Figures}
 
 \begin{frame}{Figures}
-  \begin{figure}
-    \centering
-    \begin{tikzpicture}
-      \draw [help lines,NordMagenta,very thick] (0,0) grid (5,4);
-    \end{tikzpicture}
-    \caption{Credits to Ti\textit{k}Z}
-  \end{figure}
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}
+			\draw [help lines,NordMagenta,very thick] (0,0) grid (5,4);
+		\end{tikzpicture}
+		\caption{Credits to Ti\textit{k}Z}
+	\end{figure}
 \end{frame}
 
 \end{document}
