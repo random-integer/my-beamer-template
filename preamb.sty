@@ -1,0 +1,37 @@
+\ProvidesPackage{preamb}
+
+\usepackage[english]{babel}
+\usepackage{metalogo}
+\usepackage{listings}
+\usepackage{fontspec}
+\usepackage{tikz}
+
+% \usetheme{Nord}
+\usetheme[style=light]{Nord}
+
+\setmainfont{Fira Sans Extra Condensed}
+\setsansfont{Fira Sans}
+\setmonofont{GoogleSansCode}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Scale = 0.83 ,
+	Extension = .ttf ,
+	UprightFont = *-Regular ,
+	ItalicFont = *-Italic ,
+	BoldFont = *-Bold ,
+	BoldItalicFont = *-BoldItalic ,
+]
+
+\AtBeginSection[]
+{
+  \begin{frame}[c,noframenumbering,plain]
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/show/hide]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+  \begin{frame}[c,noframenumbering,plain]
+    \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
+  \end{frame}
+}
+

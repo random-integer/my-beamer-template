@@ -11,3 +11,7 @@
 *.pdf
 *.mlx
 *.out
+*.nav
+*.snm
+*.vrb
+
