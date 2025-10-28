@@ -35,3 +35,92 @@
   \end{frame}
 }
 
+\usepackage[mathrm=sym]{unicode-math}
+\setmathfont{Fira Math}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{siunitx}       % \SI{1.23}{J.mol^{-1}.K^{-1}}
+\usepackage{hyperref}
+% \usepackage{titlesec}
+% \usepackage{pdfpages}
+\usepackage{float}
+% \usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage[font=small]{caption}
+
+\usepackage{tcolorbox}
+
+\usepackage{physics}
+% for derivatives \dd{x} \dv{x}{t}
+% and for \pqty{} instead of using \left( \right)
+% and for auto large braces around \sin() and \exp() etc.
+
+% \usepackage[siunitx, europeanresistors, RPvoltages]{circuitikz}
+% \usepackage{showexpl}
+% usage:
+% \begin{LTXexample}[width=0.2\textwidth]
+% \begin{circuitikz}[]
+%     \draw (0,0) to[isource] (0,3) -- (2,3)   % 電流源と上の導線
+%     to[R] (2,0) -- (0,0);                    % 抵抗と下の導線
+% \end{circuitikz}
+
+% TODO: enable later
+% \usepackage[backend=biber, style=numeric]{biblatex}
+% \addbibresource{citations.bib}
+
+% \usepackage{enumitem}
+% \setlist{noitemsep}       % no vertical spacing between items
+
+% TODO: change color
+% \newenvironment{mytbox}[1]{
+% 	\begin{tcolorbox}[colback=myteal!6!white,colframe=myteal!75!black,title=\textsf{#1}]
+% 		} {
+% 	\end{tcolorbox}
+% }
+% TODO: change color
+% \newenvironment{mybbox}[1]{
+% 	\begin{tcolorbox}[colback=myblue!6!white,colframe=white!10!myblue,title=\textsf{#1}]
+% 		\kai\footnotesize
+% 		} {
+% 	\end{tcolorbox}
+% }
+
+
+% % TODO: change colors to Nord
+% \definecolor{codegreen}{rgb}{0,0.6,0}
+% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+% \definecolor{codepurple}{rgb}{0.58,0,0.82}
+% \definecolor{backcolor}{rgb}{0.95,0.95,0.92}
+%
+% \lstdefinestyle{mystyle}{
+% 	backgroundcolor=\color{backcolor},
+% 	commentstyle=\color{codegreen},
+% 	keywordstyle=\color{magenta},
+% 	numberstyle=\tiny\color{codegray},
+% 	stringstyle=\color{codepurple},
+% 	basicstyle=\ttfamily\footnotesize,
+% 	breakatwhitespace=false,
+% 	breaklines=true,
+% 	captionpos=b,
+% 	keepspaces=true,
+% 	numbers=left,
+% 	numbersep=10pt,
+% 	showspaces=false,
+% 	showstringspaces=false,
+% 	showtabs=false,
+% 	tabsize=4,
+% 	columns=fullflexible,
+% 	xleftmargin=5pt,
+% 	frame=lr,
+% 	framesep=5pt,
+% 	framerule=0pt,
+% }
+%
+% \lstset{style=mystyle}
+%
+% % Usage: Lorem ipsum dolor ~print("Hello world")~ aaea wie wt dolor sit amet.
+% \lstMakeShortInline[basicstyle=\ttfamily]~
