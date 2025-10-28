@@ -19,14 +19,33 @@
 
 \section{Appearance 外観みたいなものかな？知らんけど。ビーマーノード}
 
+\begin{frame}[fragile]
+    \frametitle{Test lstlistings}
+\begin{lstlisting}[language=C++]
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cout << "Hello world!" << endl;
+    // 色は匂へど 散りぬるを
+    cout << "我が世誰ぞ 常ならむ" << endl;
+    // 有為の奥山 今日越えて
+    // 浅き夢見し 酔ひもせず
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
 
 \begin{frame}[fragile]
   \frametitle{Usage}
   Simply include the following code in your preamble:
 
-  \begin{lstlisting}[basicstyle = \ttfamily\small]
+  これを入れるだけでOK:
+
+\begin{lstlisting}[basicstyle = \ttfamily\small]
 \usetheme{Nord}
-  \end{lstlisting}
+\end{lstlisting}
 
   \bigskip
 
@@ -64,15 +83,16 @@
 
 \begin{frame}[fragile]{Recommended Free Fonts}
   \begin{description}[Selected Fonts]
-  \item[Selected Fonts] recommended for this theme\\
+  \item[Font選択] recommended for this theme\\
     \begin{lstlisting}[basicstyle = \ttfamily\small]
+% これは嘘です
 \setmainfont{Yanone Kaffeesatz}
 \setsansfont{Andika New Basic}
 \setmonofont{DejaVu Sans Mono}
     \end{lstlisting}
-  \item[Download] {\small \url{https://www.fontsquirrel.com/}}
-  \item[Install Fonts] {\small \url{https://www.google.com/get/noto/help/install/}}
-  \item[Compilation] compile with \XeLaTeX~to use system-wide fonts
+  \item[ダウンロード] {\small \url{https://www.fontsquirrel.com/}}
+  \item[インストール] {\small \url{https://www.google.com/get/noto/help/install/}}
+  \item[コンパイル] compile with \XeLaTeX~to use system-wide fonts
   \end{description}
 
 \end{frame}
