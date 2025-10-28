@@ -99,16 +99,23 @@
     % basicstyle=\color{NordDarkBlack}\ttfamily\footnotesize,        % nord0
     % backgroundcolor=\color{NordBrightestWhite},                     % nord6
     % identifierstyle=\color{NordDarkBlack},                      % nord8
+    % commentstyle=\color{NordBrightBlack},                           % nord3
+    % numberstyle=\color{NordBrightBlack}\tiny,                    % nord3
+    %
     % Nord dark
-    basicstyle=\color{NordBrightestWhite}\ttfamily\footnotesize, % nord6
+    basicstyle=\color{NordBrightestWhite}\ttfamily\small, % nord6
     backgroundcolor=\color{NordDarkBlack},                       % nord0
     identifierstyle=\color{NordBrightCyan},                      % nord8
+    % I would've used NordBrightBlack (nord3, #4C566A) for both commentstyle and numberstyle,
+    % but I decided that contrast is to be prioritized when on a slide
+    % that might be projected on to a screen
+    commentstyle=\color{NordWhite},                           % nord4
+    numberstyle=\color{NordWhite}\tiny,                    % nord4
+    %
     % Nord dark and light
-    numberstyle=\tiny\color{NordBrightBlack},                    % nord3
-    commentstyle=\color{NordBrightBlack},                           % nord3
     keywordstyle=\color{NordBlue},                               % nord9
     stringstyle=\color{NordGreen},                               % nord14
-    % directivestyle=\color{NordOrange},                           % nord12
+    %
     breakatwhitespace=false,
     breaklines=true,
     captionpos=b,
