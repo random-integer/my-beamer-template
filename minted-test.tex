@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\tcbuselibrary{minted}
+\tcbuselibrary{skins}
+
+% Polar Night
+\definecolor{NordDarkBlack}{HTML}{2E3440}     % nord0
+\definecolor{NordBlack}{HTML}{3B4252}         % nord1
+\definecolor{NordMediumBlack}{HTML}{434C5e}   % nord2
+\definecolor{NordBrightBlack}{HTML}{4C566A}   % nord3
+% Snow Storm
+\definecolor{NordWhite}{HTML}{D8DEE9}         % nord4
+\definecolor{NordBrighterWhite}{HTML}{E5E9F0}         % nord5
+\definecolor{NordBrightestWhite}{HTML}{ECEFF4}   % nord6
+% Frost
+\definecolor{NordCyan}{HTML}{8FBCBB}          % nord7
+\definecolor{NordBrightCyan}{HTML}{88C0D0}    % nord8
+\definecolor{NordBlue}{HTML}{81A1C1}          % nord9
+\definecolor{NordBrightBlue}{HTML}{5E81AC}    % nord10
+% Aurora
+\definecolor{NordRed}{HTML}{BF616A}           % nord11
+\definecolor{NordOrange}{HTML}{D08770}        % nord12
+\definecolor{NordYellow}{HTML}{EBCB8B}        % nord13
+\definecolor{NordGreen}{HTML}{A3BE8C}         % nord14
+\definecolor{NordMagenta}{HTML}{B48EAD}       % nord15
+
+\usepackage{fontspec}
+\setmonofont{GoogleSansCode}[
+	Path = /home/randint/Documents/fonts-latex/ ,
+	Scale = 0.83 ,
+	Extension = .ttf ,
+	UprightFont = *-Regular ,
+	ItalicFont = *-Italic ,
+	BoldFont = *-Bold ,
+	BoldItalicFont = *-BoldItalic ,
+]
+
+\renewcommand{\theFancyVerbLine}{\ttfamily\textcolor{NordBrightBlack}{\scriptsize\arabic{FancyVerbLine}}}
+
+\setminted{
+    style=nord,
+    baselinestretch=1.1,
+    fontsize=\small,
+    linenos,
+    autogobble,
+    numbersep=2.5mm,
+}
+
+\begin{document}
+\begin{tcblisting}{
+        colback=NordDarkBlack,
+        listing only,
+        minted language=python,
+        left=5mm,
+        % enhanced,
+        % overlay={\begin{tcbclipinterior}\fill[NordBlack] (frame.south west)
+        % rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}
+    }
+import numpy as np
+
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None # to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  # dummy variable
+
+    # compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+
+                VT = np.zeros((n*m,1), int)
+
+    return M
+\end{tcblisting}
+\end{document}
