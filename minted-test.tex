@@ -44,47 +44,55 @@
     fontsize=\small,
     linenos,
     autogobble,
-    numbersep=2.5mm,
+    numbersep=2.75mm,
 }
 
 \begin{document}
 \begin{tcblisting}{
         colback=NordDarkBlack,
         listing only,
-        minted language=python,
-        left=5mm,
+        minted language=rust,
+        left=5.5mm,
         % enhanced,
         % overlay={\begin{tcbclipinterior}\fill[NordBlack] (frame.south west)
         % rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}
     }
-import numpy as np
+// Unlike C/C++, there's no restriction on the order of function definitions
+fn main() {
+    // We can use this function here, and define it somewhere later
+    fizzbuzz_to(100);
+}
 
-def incmatrix(genl1,genl2):
-    m = len(genl1)
-    n = len(genl2)
-    M = None # to become the incidence matrix
-    VT = np.zeros((n*m,1), int)  # dummy variable
+// Function that returns a boolean value
+fn is_divisible_by(lhs: u32, rhs: u32) -> bool {
+    // Corner case, early return
+    if rhs == 0 {
+        return false;
+    }
 
-    # compute the bitwise xor matrix
-    M1 = bitxormatrix(genl1)
-    M2 = np.triu(bitxormatrix(genl2),1) 
+    // This is an expression, the `return` keyword is not necessary here
+    lhs % rhs == 0
+}
 
-    for i in range(m-1):
-        for j in range(i+1, m):
-            [r,c] = np.where(M2 == M1[i,j])
-            for k in range(len(r)):
-                VT[(i)*n + r[k]] = 1;
-                VT[(i)*n + c[k]] = 1;
-                VT[(j)*n + r[k]] = 1;
-                VT[(j)*n + c[k]] = 1;
+// Functions that "don't" return a value, actually return the unit type `()`
+fn fizzbuzz(n: u32) -> () {
+    if is_divisible_by(n, 15) {
+        println!("fizzbuzz");
+    } else if is_divisible_by(n, 3) {
+        println!("fizz");
+    } else if is_divisible_by(n, 5) {
+        println!("buzz");
+    } else {
+        println!("{}", n);
+    }
+}
 
-                if M is None:
-                    M = np.copy(VT)
-                else:
-                    M = np.concatenate((M, VT), 1)
-
-                VT = np.zeros((n*m,1), int)
-
-    return M
+// When a function returns `()`, the return type can be omitted from the
+// signature
+fn fizzbuzz_to(n: u32) {
+    for n in 1..=n {
+        fizzbuzz(n);
+    }
+}
 \end{tcblisting}
 \end{document}
