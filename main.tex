@@ -21,7 +21,15 @@
 
 \begin{frame}[fragile]
 	\frametitle{Test lstlistings}
-	\begin{lstlisting}[language=C++]
+    \begin{tcblisting}{
+            colback=NordDarkBlack,
+            listing only,
+            minted language=cpp,
+            left=5.5mm,
+            minted options={
+                fontsize=\footnotesize,
+            },
+        }
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -38,7 +46,7 @@ int main() {
     cout << a << endl;
     return 0;
 }
-\end{lstlisting}
+\end{tcblisting}
 \end{frame}
 
 
@@ -48,9 +56,17 @@ int main() {
 
 	これを入れるだけでOK:
 
-	\begin{lstlisting}[language=tex]
+    \begin{tcblisting}{
+            colback=NordDarkBlack,
+            listing only,
+            minted language=tex,
+            left=5.5mm,
+            minted options={
+                fontsize=\footnotesize,
+            },
+        }
 \usetheme{Nord}
-\end{lstlisting}
+    \end{tcblisting}
 
 	\bigskip
 
@@ -60,10 +76,18 @@ int main() {
 	デフォルトでは黒い背景になりますが、白い背景も選択できます。文字もじモジABCdefご機嫌よう。
     行距line spacing看起來還可以嗎？應該可吧。
 
-	\begin{lstlisting}[language=tex]
+    \begin{tcblisting}{
+            colback=NordDarkBlack,
+            listing only,
+            minted language=tex,
+            left=5.5mm,
+            minted options={
+                fontsize=\footnotesize,
+            },
+        }
 \usetheme[style=light]{Nord}
 \usetheme[style=dark]{Nord}
-\end{lstlisting}
+\end{tcblisting}
 
 \end{frame}
 
@@ -92,12 +116,20 @@ int main() {
 \begin{frame}[fragile]{Recommended Free Fonts}
 	\begin{description}[Selected Fonts]
 		\item[Font選択] recommended for this theme\\
-            \begin{lstlisting}[language=tex]
+    \begin{tcblisting}{
+            colback=NordDarkBlack,
+            listing only,
+            minted language=tex,
+            left=5.5mm,
+            minted options={
+                fontsize=\footnotesize,
+            },
+        }
 % これは嘘です
 \setmainfont{Yanone Kaffeesatz}
 \setsansfont{Andika New Basic}
 \setmonofont{DejaVu Sans Mono}
-\end{lstlisting}
+\end{tcblisting}
 		\item[ダウンロード] {\small \url{https://www.fontsquirrel.com/}}
 		\item[インストール] {\small \url{https://www.google.com/get/noto/help/install/}}
 		\item[コンパイル] compile with \XeLaTeX~to use system-wide fonts

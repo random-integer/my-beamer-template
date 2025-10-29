@@ -1,7 +1,7 @@
 \ProvidesPackage{preamb}
 
 \usepackage{metalogo}
-\usepackage{listings}
+% \usepackage{listings}
 \usepackage{fontspec}
 \usepackage{tikz}
 
@@ -54,7 +54,23 @@
 \usepackage{subcaption}
 \usepackage[font=small]{caption}
 
+\usepackage{minted}
+
+\setminted{
+    style=nord,
+    baselinestretch=1.1,
+    fontsize=\small,
+    linenos,
+    autogobble,
+    numbersep=2.75mm,
+}
+
 \usepackage{tcolorbox}
+\tcbuselibrary{minted}
+\tcbuselibrary{skins}
+
+% Change styling of the numbering in minted
+\renewcommand{\theFancyVerbLine}{\ttfamily\textcolor{NordBrightBlack}{\scriptsize\arabic{FancyVerbLine}}}
 
 \usepackage{physics}
 % for derivatives \dd{x} \dv{x}{t}
@@ -92,50 +108,46 @@
 % }
 
 
-\lstdefinestyle{mystyle}{
-    % Nord light
-    basicstyle=\color{NordDarkBlack}\ttfamily\footnotesize,        % nord0
-    backgroundcolor=\color{NordBrightestWhite},                     % nord6
-    identifierstyle=\color{NordDarkBlack},                      % nord8
-    commentstyle=\color{NordBrightBlack}\itshape,                           % nord3
-    numberstyle=\color{NordBrightBlack}\tiny,                    % nord3
-    %
-    %
-    % Nord dark
-    % basicstyle=\color{NordBrightestWhite}\ttfamily\small, % nord6
-    % backgroundcolor=\color{NordDarkBlack},                       % nord0
-    % identifierstyle=\color{NordBrightCyan},                      % nord8
-    % % I would've used NordBrightBlack (nord3, #4C566A) for both commentstyle and numberstyle,
-    % % but I decided that contrast is to be prioritized when on a slide
-    % % that might be projected on to a screen
-    % commentstyle=\color{NordWhite},                           % nord4
-    % numberstyle=\color{NordWhite}\tiny,                    % nord4
-    %
-    %
-    % Nord dark and light
-    % keywordstyle=\color{NordBlue},                               % nord9
-    % stringstyle=\color{NordGreen},                               % nord14
-    %
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=10pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=4,
-    columns=fullflexible,
-    xleftmargin=5pt,
-    frame=lr,
-    framesep=5pt,
-    framerule=0pt,
-}
-
-\lstset{style=mystyle}
-
-% The following lines cause errors for some unknown reason. (2025-10-28)
-% Usage: Lorem ipsum dolor ~print("Hello world")~ aaea wie wt dolor sit amet.
-% \lstMakeShortInline[basicstyle=\ttfamily]~
+% \lstdefinestyle{mystyle}{
+%     % Nord light
+%     basicstyle=\color{NordDarkBlack}\ttfamily\footnotesize,        % nord0
+%     backgroundcolor=\color{NordBrightestWhite},                     % nord6
+%     identifierstyle=\color{NordDarkBlack},                      % nord8
+%     commentstyle=\color{NordBrightBlack}\itshape,                           % nord3
+%     numberstyle=\color{NordBrightBlack}\tiny,                    % nord3
+%     %
+%     %
+%     % Nord dark
+%     % basicstyle=\color{NordBrightestWhite}\ttfamily\small, % nord6
+%     % backgroundcolor=\color{NordDarkBlack},                       % nord0
+%     % identifierstyle=\color{NordBrightCyan},                      % nord8
+%     % % I would've used NordBrightBlack (nord3, #4C566A) for both commentstyle and numberstyle,
+%     % % but I decided that contrast is to be prioritized when on a slide
+%     % % that might be projected on to a screen
+%     % commentstyle=\color{NordWhite},                           % nord4
+%     % numberstyle=\color{NordWhite}\tiny,                    % nord4
+%     %
+%     %
+%     % Nord dark and light
+%     % keywordstyle=\color{NordBlue},                               % nord9
+%     % stringstyle=\color{NordGreen},                               % nord14
+%     %
+%     breakatwhitespace=false,
+%     breaklines=true,
+%     captionpos=b,
+%     keepspaces=true,
+%     numbers=left,
+%     numbersep=10pt,
+%     showspaces=false,
+%     showstringspaces=false,
+%     showtabs=false,
+%     tabsize=4,
+%     columns=fullflexible,
+%     xleftmargin=5pt,
+%     frame=lr,
+%     framesep=5pt,
+%     framerule=0pt,
+% }
+%
+% \lstset{style=mystyle}
 
